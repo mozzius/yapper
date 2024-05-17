@@ -1,0 +1,31 @@
+{
+  "name": "yapper",
+  "version": "1.0.0",
+  "description": "chatbot for Bluesky DMs",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx --watch src/index.ts",
+    "test": "echo \"Error: you really think I'd bother with tests for this?\" && exit 1"
+  },
+  "keywords": [
+    "at protocol",
+    "bluesky",
+    "atproto"
+  ],
+  "author": "Samuel Newman <mozzius@protonmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@9.1.1",
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.13",
+    "@atproto/api": "^0.12.10",
+    "ai": "^3.1.12",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "tsx": "^4.10.4",
+    "typescript": "^5.4.5"
+  }
+}
