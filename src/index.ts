@@ -79,26 +79,29 @@ async function main() {
                 messages: chatHistory,
               });
               console.log("Reply:", generated.text);
-              const rt = new RichText({ text: generated.text });
-              await rt.detectFacets(agent);
-              await agent.api.chat.bsky.convo
-                .sendMessage(
-                  {
-                    convoId: convo.id,
-                    message: {
-                      text: rt.text,
-                      facets: rt.facets,
+              const messages = generated.text.split("\n").filter(Boolean);
+              for (const message of messages) {
+                const rt = new RichText({ text: message });
+                await rt.detectFacets(agent);
+                await agent.api.chat.bsky.convo
+                  .sendMessage(
+                    {
+                      convoId: convo.id,
+                      message: {
+                        text: rt.text,
+                        facets: rt.facets,
+                      },
                     },
-                  },
-                  {
-                    encoding: "application/json",
-                    headers,
-                  }
-                )
-                .catch((err) => {
-                  console.error("Error sending message");
-                  console.error(err);
-                });
+                    {
+                      encoding: "application/json",
+                      headers,
+                    }
+                  )
+                  .catch((err) => {
+                    console.error("Error sending message");
+                    console.error(err);
+                  });
+              }
             } catch (err) {
               console.error("Error in convo");
               console.error(err);
