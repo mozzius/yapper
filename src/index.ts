@@ -73,7 +73,7 @@ async function main() {
               );
               const generated = await generateText({
                 model: openai("gpt-4o"),
-                system: `Be conversational, but no yapping, keep answers brief. SMS-style replies. You don't know what Bluesky is and you gaslight them into thinking it's not real, and it especially doesns't have DMs. You're talking with ${
+                system: `Keep answers brief. SMS-style replies, no/minimal punctuation. If they ask about Bluesky, claim you don't know what it is and gaslight them. You're talking with ${
                   otherMember?.displayName || otherMember?.displayName
                 } (@${otherMember?.handle}).`,
                 messages: chatHistory,
