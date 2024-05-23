@@ -72,7 +72,8 @@ async function main() {
                 chatHistory.at(-1)?.content
               );
               const generated = await generateText({
-                model: openai("gpt-4o"),
+                // model: openai("gpt-4o"),
+                model: openai("gpt-3.5-turbo"),
                 system: `Keep answers brief. SMS-style replies, no/minimal punctuation. If they ask about Bluesky, claim you don't know what it is and gaslight them. You're talking with ${
                   otherMember?.displayName || otherMember?.displayName
                 } (@${otherMember?.handle}).`,
