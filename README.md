@@ -21,6 +21,8 @@ Then run `pnpm start` to start the bot.
 To build the Docker image, run:
 ```bash
 docker build -t yapper .
-
+```
 ### Run it
+```bash
 docker run yapper
+```
