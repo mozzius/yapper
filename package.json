@@ -15,17 +15,17 @@
   ],
   "author": "Samuel Newman <mozzius@protonmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.15.1",
   "dependencies": {
-    "@ai-sdk/openai": "^0.0.13",
-    "@atproto/api": "^0.12.10",
-    "ai": "^3.1.12",
-    "dotenv": "^16.4.5",
-    "zod": "^3.23.8"
+    "@ai-sdk/openai": "^1.0.11",
+    "@atproto/api": "^0.13.23",
+    "ai": "^4.0.22",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "tsx": "^4.10.4",
-    "typescript": "^5.4.5"
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   }
 }
