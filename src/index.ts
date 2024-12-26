@@ -5,7 +5,7 @@ import { BskyAgent, ChatBskyConvoDefs, RichText } from "@atproto/api";
 import "dotenv/config";
 
 const agent = new BskyAgent({
-  service: "https://pds.mozzius.dev",
+  service: "https://fibercap.us-west.host.bsky.network",
 });
 
 const headers = {

@@ -14,3 +14,13 @@ OPENAI_API_KEY=
 ```
 
 Then run `pnpm start` to start the bot.
+
+## Running the Project with Docker
+
+### Build the Docker Image
+To build the Docker image, run:
+```bash
+docker build -t yapper .
+
+### Run it
+docker run yapper
