@@ -1,5 +1,6 @@
 services:
   yapper:
+    network_mode: bridge
     build:
       context: .
       dockerfile: Dockerfile
